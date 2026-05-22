@@ -109,9 +109,9 @@ public class SaladeApiEtXpathTest {
 			assertEquals(true, futures.get(0).isDone());
 			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
 
-			/*assertThatJson(API_response)
+			assertThatJson(API_response)
 				.when(Option.IGNORING_ARRAY_ORDER)
-				.isEqualTo(getFileContent("src/test/resources/salade-api-et-xpath/SaladeApiEtXpath-test1-expected.json"));*/
+				.isEqualTo(getFileContent("src/test/resources/salade-api-et-xpath/SaladeApiEtXpath-test1-expected.json"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -147,9 +147,9 @@ public class SaladeApiEtXpathTest {
 			assertEquals(true, futures.get(0).isDone());
 			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
 			
-			/*assertThatJson(API_response)
+			assertThatJson(API_response)
 				.when(Option.IGNORING_ARRAY_ORDER)
-				.isEqualTo(getFileContent("src/test/resources/salade-api-et-xpath/SaladeApiEtXpath-test2-expected.json"));*/
+				.isEqualTo(getFileContent("src/test/resources/salade-api-et-xpath/SaladeApiEtXpath-test2-expected.json"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail();
