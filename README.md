@@ -1,4 +1,4 @@
-# Addon de l'ETL Alambic - cookbook : atelier de développement
+# Addon de l'ETL Alambic - cookbook
 
 ![Cook book](img/header.png "Cook book")
 
