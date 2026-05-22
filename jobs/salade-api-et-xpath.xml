@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alambic version="2.0">
+	<variables>
+ 		<variable name="RESOURCES_PATH">%ALAMBIC_ADDONPATH%/resources</variable>
+ 		<variable name="OUTPUT_PATH">%ALAMBIC_ADDON_OUTPUTPATH%/output</variable>
+ 		
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Development environment -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+	</variables>
+
+	<jobs>
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Requéter un fichier XML et renvoyer un flux JSON -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- Fichier XML
+				
+			Ustensils :
+				- Freemarker
+				- requête XPATH
+				
+			Plat :
+				- Flux JSON
+		 -->
+		<job name="QueryXML">
+			<resources/>
+			<destination type="api" name="réponse Json">
+				<xmlfile name="xml_store">%RESOURCES_PATH%/salade-api-et-xpath/villes.xml</xmlfile>
+				<template>%RESOURCES_PATH%/salade-api-et-xpath/api-response.ftl</template>
+			</destination>
+		</job>
+
+	</jobs>
+	
+</alambic>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alambic>
+	<variables>
+		<variable name="ALAMBIC_TARGET_ENVIRONMENT">DEVELOPMENT</variable>
+ 		<variable name="OUTPUT_PATH">./output</variable>
+ 		<variable name="RESOURCES_PATH">./resources</variable>
+ 		<variable name="DATA_GOUV_API_URL_DEVELOPMENT">https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records</variable>
+ 		<variable name="PROXY_HOST_DEVELOPMENT">proxy.fake.fr</variable>
+ 		<variable name="PROXY_PORT_DEVELOPMENT">3128</variable>
+ 		<variable name="LDAP_ENT_URI_DEVELOPMENT">ldap://localhost:389</variable>
+ 		<variable name="LDAP_ENT_LOGIN_DEVELOPMENT">cn=Fake Login</variable>
+ 		<variable name="LDAP_ENT_PWD_DEVELOPMENT">password</variable>
+		<variable name="LDAP_ENT_BASEDN">dc=ent-bretagne,dc=fr</variable>
+ 		<variable name="WEB_SERVICE_URI_DEVELOPMENT">http://localhost:8080</variable>
+	</variables>
+</alambic>

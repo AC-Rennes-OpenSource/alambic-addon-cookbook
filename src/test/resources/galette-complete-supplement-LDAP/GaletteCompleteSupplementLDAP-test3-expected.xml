@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alambic>
+	<entries>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220199X</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220199X</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique de Plaine Haute</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220199X</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22800</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ce.0220199X@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296429345</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220246Y</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220246Y</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique Port Horel</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220246Y</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22190</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ecole.0220246y@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296730872</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220253F</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220253F</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique de Plésidy</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220253F</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22720</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ce.0220253F@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296214299</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220326K</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220326K</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique Louis Guilloux</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220326K</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22440</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ecole.0220326k@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296946555</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220337X</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220337X</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique de Plouguenast</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220337X</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22150</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ce.0220337X@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296287139</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220358V</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220358V</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique Graine de Menhirs</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220358V</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22800</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ecole.0220358v@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296324875</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220390E</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220390E</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique Le Créac'h</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220390E</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22950</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ecole.0220390e@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296712330</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220406X</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220406X</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire pubilque de Trémeur</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220406X</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22250</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ce.0220406X@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296848103</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220428W</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220428W</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique Albert Jacquard</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220428W</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22700</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ecole.0220428w@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296480125</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+		<entry verifyIfExist="(&amp;(objectClass=ENTStructure)(ou=%RDN%))">
+			<variables>
+			        <variable name="RDN">0220434C</variable>
+			</variables>
+			<dn>ou=%RDN%,%LDAP_ENT_ouStructuresDn%</dn>
+			<attributes>
+				<attr name="objectClass" modifyMode="ignore">
+					<value>top</value>
+					<value>organizationalUnit</value>
+					<value>ENTOrganisation</value>
+					<value>ENTStructure</value>
+					<value>ENTEtablissement</value>
+				</attr>
+				<attr name="ou" modifyMode="replace">
+					<value>0220434C</value>
+				</attr>
+				<attr name="ENTDisplayName" modifyMode="replace">
+					<value>Ecole primaire publique de St Samson sur Rance</value>
+				</attr>
+				<attr name="description" modifyMode="replace">
+					<value>Une école</value>
+				</attr>				
+				<attr name="ENTStructureTypeStruct" modifyMode="replace">
+					<value>ECOLE DE NIVEAU ELEMENTAIRE</value>
+				</attr>
+				<attr name="ENTStructureUAI" modifyMode="replace">
+					<value>0220434C</value>
+				</attr>				
+				<attr name="postalCode" modifyMode="replace">
+					<value>22100</value>
+				</attr>				
+				<attr name="ENTStructureEmail" modifyMode="replace">
+					<value>ce.0220434C@ac-rennes.fr</value>
+				</attr>				
+				<attr name="telephoneNumber" modifyMode="replace">
+					<value>0296395286</value>
+				</attr>				
+				<attr name="ENTEtablissementMinistereTutelle" modifyMode="replace">
+					<value>MINISTERE DE L'EDUCATION NATIONALE</value>
+				</attr>				
+			</attributes>
+		</entry>
+	</entries>
+</alambic>

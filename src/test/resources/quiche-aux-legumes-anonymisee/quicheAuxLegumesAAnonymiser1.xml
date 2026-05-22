@@ -1,0 +1,19 @@
+<users>
+    <user>
+        <Id>123456</Id>
+        <Nom>Hergé</Nom>
+        <Prenom>Tintin</Prenom>
+        <Genre>M</Genre>
+        <DateDeNaissance>01/01/2013</DateDeNaissance>
+        <AdresseMail>tintinherge@bd.fr</AdresseMail>
+        <Adresse>123, rue de l'abécédaire</Adresse>
+        <CodePostale>35000</CodePostale>
+        <Ville>Rennes</Ville>
+        <Etablissement>Collège Jean Macé</Etablissement>
+        <Classe>6 ème</Classe>
+        <UAI>0220184F</UAI>
+        <UID>5b0efc8c-a797-41b1-bcbc-1a2afe99ffe1</UID>
+        <UUID>TOTO</UUID>
+        <Password>123abc</Password>
+    </user>
+</users>

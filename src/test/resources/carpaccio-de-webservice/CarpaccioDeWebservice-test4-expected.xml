@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requests>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220199X", "nom":"Ecole primaire publique de Plaine Haute", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22800", "telephone":"0296429345", "courriel":"ce.0220199X@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220246Y", "nom":"Ecole primaire publique Port Horel", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22190", "telephone":"0296730872", "courriel":"ecole.0220246y@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220253F", "nom":"Ecole primaire publique de Plésidy", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22720", "telephone":"0296214299", "courriel":"ce.0220253F@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220326K", "nom":"Ecole primaire publique Louis Guilloux", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22440", "telephone":"0296946555", "courriel":"ecole.0220326k@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220337X", "nom":"Ecole primaire publique de Plouguenast", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22150", "telephone":"0296287139", "courriel":"ce.0220337X@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220358V", "nom":"Ecole primaire publique Graine de Menhirs", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22800", "telephone":"0296324875", "courriel":"ecole.0220358v@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220390E", "nom":"Ecole primaire publique Le Créac'h", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22950", "telephone":"0296712330", "courriel":"ecole.0220390e@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220406X", "nom":"Ecole primaire pubilque de Trémeur", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22250", "telephone":"0296848103", "courriel":"ce.0220406X@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220428W", "nom":"Ecole primaire publique Albert Jacquard", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22700", "telephone":"0296480125", "courriel":"ecole.0220428w@ac-rennes.fr" }</payload>
+	</request>
+	<request uri="%WEB_SERVICE_URI_%ALAMBIC_TARGET_ENVIRONMENT%%" method="POST">
+		<headers>
+			<header name="Content-Type">application/json; charset=UTF-8</header>
+		</headers>
+		<response_codes>
+			<code type="success">200</code>
+		</response_codes>
+		<payload>{ "uai":"0220434C", "nom":"Ecole primaire publique de St Samson sur Rance", "type":"ECOLE DE NIVEAU ELEMENTAIRE", "ministere_tutelle":"MINISTERE DE L'EDUCATION NATIONALE", "code_postal":"22100", "telephone":"0296395286", "courriel":"ce.0220434C@ac-rennes.fr" }</payload>
+	</request>
+</requests>

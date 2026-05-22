@@ -1,0 +1,102 @@
+<structures>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plaine Haute</nom_etablissement>
+		<code_postal>22800</code_postal>
+		<mail>ce.0220199X@ac-rennes.fr</mail>
+		<nom_commune>Plaine-Haute</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296429345</telephone>
+		<identifiant_de_l_etablissement>0220199X</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Port Horel</nom_etablissement>
+		<code_postal>22190</code_postal>
+		<mail>ecole.0220246y@ac-rennes.fr</mail>
+		<nom_commune>Plérin</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296730872</telephone>
+		<identifiant_de_l_etablissement>0220246Y</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plésidy</nom_etablissement>
+		<code_postal>22720</code_postal>
+		<mail>ce.0220253F@ac-rennes.fr</mail>
+		<nom_commune>Plésidy</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296214299</telephone>
+		<identifiant_de_l_etablissement>0220253F</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Louis Guilloux</nom_etablissement>
+		<code_postal>22440</code_postal>
+		<mail>ecole.0220326k@ac-rennes.fr</mail>
+		<nom_commune>Ploufragan</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296946555</telephone>
+		<identifiant_de_l_etablissement>0220326K</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plouguenast</nom_etablissement>
+		<code_postal>22150</code_postal>
+		<mail>ce.0220337X@ac-rennes.fr</mail>
+		<nom_commune>Plouguenast-Langast</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296287139</telephone>
+		<identifiant_de_l_etablissement>0220337X</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Graine de Menhirs</nom_etablissement>
+		<code_postal>22800</code_postal>
+		<mail>ecole.0220358v@ac-rennes.fr</mail>
+		<nom_commune>Le Vieux-Bourg</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296324875</telephone>
+		<identifiant_de_l_etablissement>0220358V</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Le Créac&apos;h</nom_etablissement>
+		<code_postal>22950</code_postal>
+		<mail>ecole.0220390e@ac-rennes.fr</mail>
+		<nom_commune>Trégueux</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296712330</telephone>
+		<identifiant_de_l_etablissement>0220390E</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire pubilque de Trémeur</nom_etablissement>
+		<code_postal>22250</code_postal>
+		<mail>ce.0220406X@ac-rennes.fr</mail>
+		<nom_commune>Trémeur</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296848103</telephone>
+		<identifiant_de_l_etablissement>0220406X</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Albert Jacquard</nom_etablissement>
+		<code_postal>22700</code_postal>
+		<mail>ecole.0220428w@ac-rennes.fr</mail>
+		<nom_commune>Saint-Quay-Perros</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296480125</telephone>
+		<identifiant_de_l_etablissement>0220428W</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de St Samson sur Rance</nom_etablissement>
+		<code_postal>22100</code_postal>
+		<mail>ce.0220434C@ac-rennes.fr</mail>
+		<nom_commune>Saint-Samson-sur-Rance</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296395286</telephone>
+		<identifiant_de_l_etablissement>0220434C</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+</structures>

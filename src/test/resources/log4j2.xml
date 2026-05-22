@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- APPENDERS CONFIGURATION: 
+[CONSOLE] - Purpose: to gather all common applicative logs 
+-->
+<Configuration status="info" name="Logging" packages="" monitorInterval="30">
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d{ISO8601} %-5p [%t] [%c] %m%n</Pattern>
+			</PatternLayout>
+		</Console>
+	</Appenders>
+	<Loggers>
+	    <Logger name="fr.toutatice.dataloader.freemarker" level="debug" additivity="false">
+			<AppenderRef ref="CONSOLE" />
+		</Logger>
+	    <Logger name="fr.gouv.education.acrennes.alambic.addon.cookbook" level="debug" additivity="false">
+			<AppenderRef ref="CONSOLE" />
+		</Logger>
+		<Root level="debug">
+			<AppenderRef ref="CONSOLE" />
+		</Root>
+	</Loggers>
+</Configuration>

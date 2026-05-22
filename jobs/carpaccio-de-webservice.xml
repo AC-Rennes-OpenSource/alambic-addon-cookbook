@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alambic version="2.0">
+	<variables>
+ 		<variable name="RESOURCES_PATH">../resources</variable>
+ 		<variable name="OUTPUT_PATH">../output</variable>
+ 		
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Development environment -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+ 		<variable name="DATA_GOUV_API_URL_DEVELOPMENT">https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records</variable>
+ 		<variable name="PROXY_HOST_DEVELOPMENT">proxy.fake.fr</variable>
+ 		<variable name="PROXY_PORT_DEVELOPMENT">3128</variable>
+ 		<variable name="WEB_SERVICE_URI_DEVELOPMENT">http://localhost:8080</variable>
+	</variables>
+
+	<jobs>
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Obtenir une liste de 10 écoles publiques de la région académique Bretagne -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- API REST https://api.gouv.fr/les-api/api-annuaire-education
+				
+			Ustensils :
+				- Freemarker
+				
+			Plat :
+				- Fichier CSV contenant la liste de dix écoles publiques bretonnes 
+		 -->
+		<job name="ListeEcolesPubliquesBretagneCSV">
+			<resources>
+				<resource type="webService" name="data.education.gouv.fr" connectionTimeout="5000">
+					<uri>%DATA_GOUV_API_URL_%ALAMBIC_TARGET_ENVIRONMENT%%</uri>
+					<method>GET</method>
+					<headers>
+						<header name="Content-Type">application/json</header>
+					</headers>
+					<response_codes>
+						<code type="success">200</code>
+					</response_codes>
+					<query>{"parameters":"select=identifiant_de_l_etablissement,nom_etablissement,code_postal,nom_commune,telephone,ministere_tutelle,libelle_nature,mail&amp;where=statut_public_prive='Public' AND type_etablissement='Ecole' AND code_academie=14&amp;limit=10&amp;offset=0"}</query>
+					<proxy>
+						<host>%PROXY_HOST_%ALAMBIC_TARGET_ENVIRONMENT%%</host>
+						<port>%PROXY_PORT_%ALAMBIC_TARGET_ENVIRONMENT%%</port>
+					</proxy>
+				</resource>
+			</resources>
+			<destination type="file" name="ListeEcolesPubliquesBretagne.csv">
+				<xmlfile name="xmldefinition"/>
+				<template>%RESOURCES_PATH%/carpaccio-de-webservice/ListeEcolesPubliquesBretagne.csv.ftl</template>
+				<output>%OUTPUT_PATH%/ListeEcolesPubliquesBretagne.csv</output>
+			</destination>
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- API REST https://api.gouv.fr/les-api/api-annuaire-education
+				
+			Ustensils :
+				- Freemarker
+				
+			Plat :
+				- Fichier XML contenant la liste de dix écoles publiques bretonnes 
+		 -->
+		<job name="ListeEcolesPubliquesBretagneXML">
+			<resources>
+				<resource type="webService" name="data.education.gouv.fr" connectionTimeout="5000">
+					<uri>%DATA_GOUV_API_URL_%ALAMBIC_TARGET_ENVIRONMENT%%</uri>
+					<method>GET</method>
+					<headers>
+						<header name="Content-Type">application/json</header>
+					</headers>
+					<response_codes>
+						<code type="success">200</code>
+					</response_codes>
+					<query>{"parameters":"select=identifiant_de_l_etablissement,nom_etablissement,code_postal,nom_commune,telephone,ministere_tutelle,libelle_nature,mail&amp;where=statut_public_prive='Public' AND type_etablissement='Ecole' AND code_academie=14&amp;limit=10&amp;offset=0"}</query>
+					<proxy>
+						<host>%PROXY_HOST_%ALAMBIC_TARGET_ENVIRONMENT%%</host>
+						<port>%PROXY_PORT_%ALAMBIC_TARGET_ENVIRONMENT%%</port>
+					</proxy>
+				</resource>
+			</resources>
+			<destination type="file" name="ListeEcolesPubliquesBretagne.xml">
+				<xmlfile name="xmldefinition"/>
+				<template>%RESOURCES_PATH%/carpaccio-de-webservice/ListeEcolesPubliquesBretagne.xml.ftl</template>
+				<output>%OUTPUT_PATH%/ListeEcolesPubliquesBretagne.xml</output>
+			</destination>
+		</job>
+
+		<job name="ListeEcolesPubliquesBretagneCSVAndXML" failure-threshold="ORANGE" asynchChildJobs="true">
+			<execute-job name="ListeEcolesPubliquesBretagneCSV" />
+			<execute-job name="ListeEcolesPubliquesBretagneXML" />
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- Fichiers XML listant des structures
+				- Paramètre d'entrée pour indiquer le chemin où trouver les fichiers XML => alimentera la variable "c1"
+				
+			Ustensils :
+				- Freemarker
+				- Tri sur chemin de fichier pour toujours traiter ceux-ci dans le même ordre
+				- Requétage XPATH sur fichier XML
+				
+			Plat :
+				- Fichier pivot WebService décrivant les entrées à mettre à jour (ou créer) sur un web service cible
+		 -->
+		<job name="ListeEcolesPubliquesBretagneFichiersVersPivotWebService">
+			<resources>
+				<resource type="fileExplorer" name="fichiers-listant-les-structures">
+					<query>{"rootPath": "%c1%", "filterRegex": "CarpaccioDeWebservice-expected.xml"}</query>
+				</resource>
+			</resources>
+			<destination type="file" name="ListeEcolesPubliquesBretagneFichiersVersPivotWebService.xml">
+				<template>%RESOURCES_PATH%/carpaccio-de-webservice/ListeEcolesPubliquesBretagneFichiersVersPivotWebService.xml.ftl</template>
+				<output>%OUTPUT_PATH%/ListeEcolesPubliquesBretagneFichiersVersPivotWebService.xml</output>
+			</destination>
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- Paramètre d'entrée pour indiquer le chemin du fichier pivot WebService décrivant les entrées à mettre à jour (ou créer) sur un web service cible => alimentera la variable "c1"
+				
+			Ustensils :
+				- 
+				
+			Plat :
+				- Web service mis à jour
+		 -->
+		<job name="ListeEcolesPubliquesBretagnePivotWebServiceVersWebService">
+			<source type="none" name="none" />
+			<destination type="webService" name="Mon web service favori" connectionTimeout="5000">
+				<pivot>%c1%</pivot>
+				<authentication/>
+			</destination>
+		</job>
+	</jobs>
+	
+</alambic>

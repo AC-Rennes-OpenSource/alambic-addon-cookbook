@@ -1,0 +1,333 @@
+{
+	"total_count": 1441,
+	"links": [
+		{
+			"rel": "self",
+			"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records?select=identifiant_de_l_etablissement%2Cnom_etablissement%2Ccode_postal%2Cnom_commune%2Ctelephone%2Cministere_tutelle%2Clibelle_nature%2Cmail&where=%5B%27statut_public_prive%3D%22Public%22+AND+type_etablissement%3D%22Ecole%22%27%2C+%27code_academie%3D14%27%5D&limit=10&offset=0&include_app_metas=False"
+		},
+		{
+			"rel": "first",
+			"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records?select=identifiant_de_l_etablissement%2Cnom_etablissement%2Ccode_postal%2Cnom_commune%2Ctelephone%2Cministere_tutelle%2Clibelle_nature%2Cmail&where=%5B%27statut_public_prive%3D%22Public%22+AND+type_etablissement%3D%22Ecole%22%27%2C+%27code_academie%3D14%27%5D&limit=10&offset=0&include_app_metas=False"
+		},
+		{
+			"rel": "last",
+			"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records?select=identifiant_de_l_etablissement%2Cnom_etablissement%2Ccode_postal%2Cnom_commune%2Ctelephone%2Cministere_tutelle%2Clibelle_nature%2Cmail&where=%5B%27statut_public_prive%3D%22Public%22+AND+type_etablissement%3D%22Ecole%22%27%2C+%27code_academie%3D14%27%5D&limit=10&offset=1440&include_app_metas=False"
+		},
+		{
+			"rel": "next",
+			"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records?select=identifiant_de_l_etablissement%2Cnom_etablissement%2Ccode_postal%2Cnom_commune%2Ctelephone%2Cministere_tutelle%2Clibelle_nature%2Cmail&where=%5B%27statut_public_prive%3D%22Public%22+AND+type_etablissement%3D%22Ecole%22%27%2C+%27code_academie%3D14%27%5D&limit=10&offset=10&include_app_metas=False"
+		}
+	],
+	"records": [
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/4968da0bc3d69adfba98d0e360559e19b7b2af79"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "4968da0bc3d69adfba98d0e360559e19b7b2af79",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 642,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220199X",
+					"nom_etablissement": "Ecole primaire publique de Plaine Haute",
+					"code_postal": "22800",
+					"nom_commune": "Plaine-Haute",
+					"telephone": "0296429345",
+					"mail": "ce.0220199X@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/bfb997fae373524b41051af6753ef064f757a9fd"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "bfb997fae373524b41051af6753ef064f757a9fd",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 670,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220246Y",
+					"nom_etablissement": "Ecole primaire publique Port Horel",
+					"code_postal": "22190",
+					"nom_commune": "Pl\u00e9rin",
+					"telephone": "0296730872",
+					"mail": "ecole.0220246y@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/acebb2bacace3871ef0210b56f2df763067c5b3b"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "acebb2bacace3871ef0210b56f2df763067c5b3b",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 634,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220253F",
+					"nom_etablissement": "Ecole primaire publique de Pl\u00e9sidy",
+					"code_postal": "22720",
+					"nom_commune": "Pl\u00e9sidy",
+					"telephone": "0296214299",
+					"mail": "ce.0220253F@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/fb54c6be1723d7f567dd094e74e5920beb4c8060"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "fb54c6be1723d7f567dd094e74e5920beb4c8060",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 650,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220326K",
+					"nom_etablissement": "Ecole primaire publique Louis Guilloux",
+					"code_postal": "22440",
+					"nom_commune": "Ploufragan",
+					"telephone": "0296946555",
+					"mail": "ecole.0220326k@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/691ce45544e40ffe993338bc0261ed7af7ca19ac"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "691ce45544e40ffe993338bc0261ed7af7ca19ac",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 650,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220337X",
+					"nom_etablissement": "Ecole primaire publique de Plouguenast",
+					"code_postal": "22150",
+					"nom_commune": "Plouguenast-Langast",
+					"telephone": "0296287139",
+					"mail": "ce.0220337X@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/e41369577752c8e4a948b2d53e718b4c1b8ef473"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "e41369577752c8e4a948b2d53e718b4c1b8ef473",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 645,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220358V",
+					"nom_etablissement": "Ecole primaire publique Graine de Menhirs",
+					"code_postal": "22800",
+					"nom_commune": "Le Vieux-Bourg",
+					"telephone": "0296324875",
+					"mail": "ecole.0220358v@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/51ca99f70ddfbd71863774da62dbad0f924ce6f6"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "51ca99f70ddfbd71863774da62dbad0f924ce6f6",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 643,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220390E",
+					"nom_etablissement": "Ecole primaire publique Le Cr\u00e9ac'h",
+					"code_postal": "22950",
+					"nom_commune": "Tr\u00e9gueux",
+					"telephone": "0296712330",
+					"mail": "ecole.0220390e@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/b10c03156ca275e9ab726a79711386c993311269"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "b10c03156ca275e9ab726a79711386c993311269",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 622,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220406X",
+					"nom_etablissement": "Ecole primaire pubilque de Tr\u00e9meur",
+					"code_postal": "22250",
+					"nom_commune": "Tr\u00e9meur",
+					"telephone": "0296848103",
+					"mail": "ce.0220406X@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/43f7de4854872ac8acef7c5f5a74dc74e7325ca6"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "43f7de4854872ac8acef7c5f5a74dc74e7325ca6",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 639,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220428W",
+					"nom_etablissement": "Ecole primaire publique Albert Jacquard",
+					"code_postal": "22700",
+					"nom_commune": "Saint-Quay-Perros",
+					"telephone": "0296480125",
+					"mail": "ecole.0220428w@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		},
+		{
+			"links": [
+				{
+					"rel": "self",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records/aba3805de7bf17b93388a210536c2b4c7f63ad40"
+				},
+				{
+					"rel": "datasets",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets"
+				},
+				{
+					"rel": "dataset",
+					"href": "https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education"
+				}
+			],
+			"record": {
+				"id": "aba3805de7bf17b93388a210536c2b4c7f63ad40",
+				"timestamp": "2022-12-09T04:00:00Z",
+				"size": 656,
+				"fields": {
+					"identifiant_de_l_etablissement": "0220434C",
+					"nom_etablissement": "Ecole primaire publique de St Samson sur Rance",
+					"code_postal": "22100",
+					"nom_commune": "Saint-Samson-sur-Rance",
+					"telephone": "0296395286",
+					"mail": "ce.0220434C@ac-rennes.fr",
+					"ministere_tutelle": "MINISTERE DE L'EDUCATION NATIONALE",
+					"libelle_nature": "ECOLE DE NIVEAU ELEMENTAIRE"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,19 @@
+<users>
+    <user>
+        <Id>309582</Id>
+        <Nom>Latortue</Nom>
+        <Prenom>Franklin</Prenom>
+        <Genre>M</Genre>
+        <DateDeNaissance>01/09/1997</DateDeNaissance>
+        <AdresseMail>franklinlatortue@bd.fr</AdresseMail>
+        <Adresse>12, chemin du ruisseau</Adresse>
+        <CodePostale>60500</CodePostale>
+        <Ville>Forêt Boisee</Ville>
+        <Etablissement>Lycee Jean Macé</Etablissement>
+        <Classe>2nd</Classe>
+        <UAI>0350026N</UAI>
+        <UID>5b0efc8c-a797-41b1-bcbc-1a2afe99ffe3</UID>
+        <UUID>TUTU</UUID>
+        <Password>456def</Password>
+    </user>
+</users>

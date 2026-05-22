@@ -1,0 +1,52 @@
+<structures>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plaine Haute</nom_etablissement>
+		<code_postal>22800</code_postal>
+		<mail>ce.0220199X@ac-rennes.fr</mail>
+		<nom_commune>Plaine-Haute</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296429345</telephone>
+		<identifiant_de_l_etablissement>0220199X</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Port Horel</nom_etablissement>
+		<code_postal>22190</code_postal>
+		<mail>ecole.0220246y@ac-rennes.fr</mail>
+		<nom_commune>Plérin</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296730872</telephone>
+		<identifiant_de_l_etablissement>0220246Y</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plésidy</nom_etablissement>
+		<code_postal>22720</code_postal>
+		<mail>ce.0220253F@ac-rennes.fr</mail>
+		<nom_commune>Plésidy</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296214299</telephone>
+		<identifiant_de_l_etablissement>0220253F</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique Louis Guilloux</nom_etablissement>
+		<code_postal>22440</code_postal>
+		<mail>ecole.0220326k@ac-rennes.fr</mail>
+		<nom_commune>Ploufragan</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296946555</telephone>
+		<identifiant_de_l_etablissement>0220326K</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+	<structure>
+		<nom_etablissement>Ecole primaire publique de Plouguenast</nom_etablissement>
+		<code_postal>22150</code_postal>
+		<mail>ce.0220337X@ac-rennes.fr</mail>
+		<nom_commune>Plouguenast-Langast</nom_commune>
+		<ministere_tutelle>MINISTERE DE L&apos;EDUCATION NATIONALE</ministere_tutelle>
+		<telephone>0296287139</telephone>
+		<identifiant_de_l_etablissement>0220337X</identifiant_de_l_etablissement>
+		<libelle_nature>ECOLE DE NIVEAU ELEMENTAIRE</libelle_nature>
+	</structure>
+</structures>

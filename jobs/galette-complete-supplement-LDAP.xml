@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alambic version="2.0">
+	<variables>
+ 		<variable name="RESOURCES_PATH">../resources</variable>
+ 		<variable name="OUTPUT_PATH">../output</variable>
+ 		
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Development environment -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+ 		<variable name="LDAP_ENT_URI_DEVELOPMENT">ldap://localhost:389</variable>
+ 		<variable name="LDAP_ENT_LOGIN_DEVELOPMENT">cn=Directory Manager</variable>
+ 		<variable name="LDAP_ENT_PWD_DEVELOPMENT">password</variable>
+	</variables>
+
+	<jobs>
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Interroger le LDAP et produire un fichier XML contenant le résultat d'une recherche -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- LDAP
+				
+			Ustensils :
+				- Freemarker
+				- Requête LDAP statique
+				
+			Plat :
+				- Fichier XML contenant le résultat d'une recherche
+		 -->
+		<job name="InterrogationLDAPVersXML">
+			<resources>
+				<resource type="ldap" name="Mon LDAP favori">
+					<uri>%LDAP_ENT_URI_%ALAMBIC_TARGET_ENVIRONMENT%%/%LDAP_ENT_ouPersonnesDn%</uri>
+					<login>%LDAP_ENT_LOGIN_%ALAMBIC_TARGET_ENVIRONMENT%%</login>
+					<passwd>%LDAP_ENT_PWD_%ALAMBIC_TARGET_ENVIRONMENT%%</passwd>
+					<query>(&amp;(objectClass=ENTPerson))</query>
+					<scope>ONELEVEL_SCOPE</scope>
+					<attributeList>uid,sn,givenName,title</attributeList>
+				</resource>
+			</resources>
+			<destination type="file" name="InterrogationLDAPVersXML.xml">
+				<xmlfile name="xmldefinition"/>
+				<template>%RESOURCES_PATH%/galette-complete-supplement-LDAP/InterrogationLDAPVersXML.xml.ftl</template>
+				<output>%OUTPUT_PATH%/InterrogationLDAPVersXML.xml</output>
+			</destination>
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- LDAP
+				
+			Ustensils :
+				- Freemarker
+				- Requête LDAP dynamique
+				
+			Plat :
+				- Fichier XML contenant le résultat d'une recherche
+		 -->
+		<job name="InterrogationDynamiqueLDAPVersXML">
+			<resources>
+				<resource type="ldap" name="Mon LDAP favori" dynamic="true">
+					<uri>%LDAP_ENT_URI_%ALAMBIC_TARGET_ENVIRONMENT%%/%LDAP_ENT_ouPersonnesDn%</uri>
+					<login>%LDAP_ENT_LOGIN_%ALAMBIC_TARGET_ENVIRONMENT%%</login>
+					<passwd>%LDAP_ENT_PWD_%ALAMBIC_TARGET_ENVIRONMENT%%</passwd>
+					<query/>
+					<scope>ONELEVEL_SCOPE</scope>
+					<attributeList>uid,sn,givenName,title</attributeList>
+				</resource>
+			</resources>
+			<destination type="file" name="InterrogationLDAPVersXML.xml">
+				<xmlfile name="xmldefinition"/>
+				<template>%RESOURCES_PATH%/galette-complete-supplement-LDAP/InterrogationDynamiqueLDAPVersXML.xml.ftl</template>
+				<output>%OUTPUT_PATH%/InterrogationDynamiqueLDAPVersXML.xml</output>
+			</destination>
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- Fichiers XML listant des structures
+				- Paramètre d'entrée pour indiquer le chemin où trouver les fichiers XML => alimentera la variable "c1"
+				
+			Ustensils :
+				- Freemarker
+				- Tri sur chemin de fichier pour toujours traiter ceux-ci dans le même ordre
+				- Requétage XPATH sur fichier XML
+				
+			Plat :
+				- Fichier pivot LDAP décrivant les entrées à mettre à jour (ou créer) sur un annuaire cible
+		 -->
+		<job name="InterrogationFichiersVersPivotLDAP">
+			<resources>
+				<resource type="fileExplorer" name="fichiers-listant-les-structures">
+					<query>{"rootPath": "%c1%", "filterRegex": "GaletteCompleteSupplementLDAP.+structures[0-9].xml"}</query>
+				</resource>
+			</resources>
+			<destination type="file" name="InterrogationFichiersVersPivotLDAP.xml">
+				<xmlfile name="xmldefinition"/>
+				<template>%RESOURCES_PATH%/galette-complete-supplement-LDAP/InterrogationFichiersVersPivotLDAP.xml.ftl</template>
+				<output>%OUTPUT_PATH%/InterrogationFichiersVersPivotLDAP.xml</output>
+			</destination>
+		</job>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RECETTE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Ingrédients : 
+				- Paramètre d'entrée pour indiquer le chemin du fichier pivot LDAP décrivant les entrées à mettre à jour (ou créer) sur un annuaire cible => alimentera la variable "c1"
+				
+			Ustensils :
+				- 
+				
+			Plat :
+				- Annuaire LDAP mis à jour
+		 -->
+		<job name="InterrogationPivotLDAPVersLDAP">
+			<source type="none" name="none" />
+			<destination type="ldap" name="Mon LDAP favori">
+				<uri>%LDAP_ENT_URI_%ALAMBIC_TARGET_ENVIRONMENT%%/%LDAP_ENT_BASEDN%</uri>
+				<login>%LDAP_ENT_LOGIN_%ALAMBIC_TARGET_ENVIRONMENT%%</login>
+				<passwd>%LDAP_ENT_PWD_%ALAMBIC_TARGET_ENVIRONMENT%%</passwd>
+				<pivot>%c1%</pivot>
+			</destination>
+		</job>
+
+	</jobs>
+	
+</alambic>
