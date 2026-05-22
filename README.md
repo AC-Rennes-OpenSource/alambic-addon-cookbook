@@ -1,36 +1,19 @@
-= Addon de l'ETL Alambic - cookbook : atelier de développement
-Marc Berhaut <marc.berhaut@ac-rennes.fr>
-v0.1, 09/12/2022, version initiale
-:doctype: book
-:description: Addon de présentation du développement de addon Alambic
-:keywords: ETL, Alambic, addon, cookbook
-:imagesdir: ./img
-:source-highlighter: pygments
-:toc: left
-:toclevels: 3
+# Addon de l'ETL Alambic - cookbook : atelier de développement
 
-image::header.png[]
+![Cook book](img/header.png "Cook book")
 
-== Description du addon
+## Description du addon
 
 Ce addon est destiné à collecter des exemples d'utilisation du produit Alambic qui
 peuvent être repris pour le développement de addon métiers.
 
-== Historique
-
-[cols="2", options="header"]
-|===
-| Date | Description
-| 09/12/2022 | Version initiale
-|===
-
-== Recettes
+## Recettes
 
 . Carpaccio de WEB services
 . Galette complète supplément LDAP
 . Salade d'API et de requêtes XPATH
 
-== Explication
+## Explication
 
 Le RGPD est entré en vigueur le 25 mai 2018. Il exige que les organismes mettent en
 œuvre les « mesures techniques et organisationnelles appropriées » pour être en mesure
@@ -55,11 +38,11 @@ Afin de disposer de jeux de données réalistes et représentatifs pour les phas
 qualification d’un projet, tout en restant conforme au RGPD, l’académie de Rennes a
 fait le choix d’utiliser les exports AAF après les avoir au préalable anonymisés.
 
-== Objectif du projet
+## Objectif du projet
 Nous verrons ensemble au travers de nombreuse illustration, comment ce mécanisme d'anonymisation
 est mis en place suivant les valeurs à anonymiser au travers de l'utilisation des générateurs.
 
-== Générateurs utilisés
+## Générateurs utilisés
 
 * randomIntegerGenerator
 * randomUserGenerator
@@ -73,7 +56,7 @@ est mis en place suivant les valeurs à anonymiser au travers de l'utilisation d
 
 
 
-== Explication du fonctionnement des tests
+## Explication du fonctionnement des tests
 Pour exemple, dans le cas ci-dessous, le generateur d'integer permet l'anonymisation d'un integer, s'appuyant sur une base de donnée chargée côté postgres permettant de choisir un integer aleatoire, qui sera lier par le contexte et le blurid à l'integer source.
 
 Exemple:
@@ -82,4 +65,4 @@ Pour un id donnée, on va faire appel au générateur au travers d'une requête 
 `Fn.query(resources, 'randomIntegerGenerator', '{"count":1,"minValue":100000, "maxValue":999999, "processId":"PROCESS_TESTU","reuse":"true", "blurid":"${userBlurId}"}', 'NONE')[0].value[0]`
 
 
-== Comment est-ce que ça fonctionne sur un environnement de production ?
+## Comment est-ce que ça fonctionne sur un environnement de production ?
