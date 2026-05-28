@@ -2,7 +2,6 @@ package fr.gouv.education.acrennes.alambic.addon.cookbook;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 import java.io.BufferedReader;
@@ -12,7 +11,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
@@ -43,8 +41,6 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.xmlunit.builder.DiffBuilder;
-import org.xmlunit.diff.Diff;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -66,8 +62,7 @@ import fr.gouv.education.acrennes.alambic.utils.Variables;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({JobHelper.class, VFS.class})
 @PowerMockIgnore({ "javax.management.*", "javax.net.ssl.*" })
-public class QuicheAuxLegumesAnonymiseeTest {
-
+public class Atelier1Test {
 	private static final String RUN_ID = "1";
 	private static final String UNIT_TEST_PERSISTENCE_UNIT = "TEST_PERSISTENCE_UNIT";
 	private static final String TEST_USERS_DICTIONARY_ARCHIVE = "src/test/resources/user-dictionaries-testu.tar.gz";
@@ -94,7 +89,7 @@ public class QuicheAuxLegumesAnonymiseeTest {
 	        return invocation.callRealMethod();
 	    });		
 		variables = new Variables();
-		try (final InputStream is = QuicheAuxLegumesAnonymiseeTest.class.getClassLoader().getResourceAsStream("variables.xml")) {
+		try (final InputStream is = Atelier1Test.class.getClassLoader().getResourceAsStream("variables.xml")) {
 			Element variablesElt = (new SAXBuilder()).build(is).getRootElement();
 			variables.loadFromXmlNode(variablesElt.getChild("variables").getChildren("variable"));
 		}
@@ -171,27 +166,24 @@ public class QuicheAuxLegumesAnonymiseeTest {
 	}
 
 	/* test use case :
-	 * - Recette : quiche-aux-legumes-anonymisee.xml
-	 * - Job : BuildAnonymizationRecipe
-	 * - Anonymiser une recette xml
+	 * - Recette : atelier1
+	 * - Job : anonymization-job
+	 * - Description : ...
 	 **/
 	@Test
 	public void test1() {
 		try {
-			Jobs jobs = new Jobs(".", "jobs/quiche-aux-legumes-anonymisee.xml", variables, new Properties());
+			Jobs jobs = new Jobs(".", "jobs/atelier1.xml", variables, new Properties());
 			List<Future<ActivityMBean>> futures;
-            futures = jobs.executeJobList(Arrays.asList("BuildAnonymizationRecipe"), RUN_ID);
+            futures = jobs.executeJobList(Arrays.asList("anonymization-job"), RUN_ID);
 
-            Path fichierAnonymise = Paths.get("output/quicheAuxLegumesAnonymisee.xml");
-			final File source = new File("src/test/resources/quiche-aux-legumes-anonymisee/quicheAuxLegumesAAnonymiser1.xml");
-			final File output = new File(fichierAnonymise.toString());
-			Reader expectedFileReader = new BufferedReader(new FileReader(source));
-			Reader outputFileReader = new BufferedReader(new FileReader(output));
+			final File sourceFile = new File("src/test/resources/atelier1/atelier1-file-to-anonymize.xml");
+			final File anonymizedFile = new File(Paths.get("output/atelier1-anonymized-file.xml").toString());
+			Reader sourceFileReader = new BufferedReader(new FileReader(sourceFile));
+			Reader anonymizedFileReader = new BufferedReader(new FileReader(anonymizedFile));
 
 			// Assertions
-			assertTrue("Le fichier n'existe pas.", Files.exists(fichierAnonymise));
-			assertTrue("Le fichier est vide.", Files.size(fichierAnonymise)>0);
-            assertFalse("Le fichier créé est identique au fichier source.", IOUtils.contentEqualsIgnoreEOL(expectedFileReader, outputFileReader));
+            assertFalse("Le fichier créé est identique au fichier attendu.", IOUtils.contentEqualsIgnoreEOL(sourceFileReader, anonymizedFileReader));
 			assertEquals(1, futures.size());
             assertTrue(futures.get(0).isDone());
 			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
@@ -200,92 +192,7 @@ public class QuicheAuxLegumesAnonymiseeTest {
 			Assert.fail();
 		}
 	}
-
-	/* test use case :
-	 * - Recette : quiche-aux-legumes-anonymisee.xml
-	 * - Job : BuildAnonymizationRecipe
-	 * - Anonymiser deux recettes xml, avec les mêmes ingrédients (un même contexte et une même clé)
-	 **/
-	@Test
-	public void test2() {
-		try {
-			Jobs jobs = new Jobs(".", "jobs/quiche-aux-legumes-anonymisee.xml", variables, new Properties());
-			List<Future<ActivityMBean>> futures = jobs.executeJobList(Arrays.asList("BuildAnonymizationRecipeWithIdenticalContextsAndKeys"), RUN_ID);
-
-			Path fichierAnonymise1 = Paths.get("output/quicheAuxLegumesAnonymisee1.xml");
-			Path fichierAnonymise2 = Paths.get("output/quicheAuxLegumesAnonymisee2.xml");
-			final File source = new File("src/test/resources/quiche-aux-legumes-anonymisee/quicheAuxLegumesAAnonymiser1.xml");
-			final File output1 = new File(fichierAnonymise1.toString());
-			final File output2 = new File(fichierAnonymise2.toString());
-			Reader expectedFileReader1 = new BufferedReader(new FileReader(source));
-			Reader outputFileReader1 = new BufferedReader(new FileReader(output1));
-			Reader outputFileReader2 = new BufferedReader(new FileReader(output2));
-
-			// Assertions
-			assertTrue("Le fichier n'existe pas.", Files.exists(fichierAnonymise1));
-			assertTrue("Le fichier n'existe pas.", Files.exists(fichierAnonymise2));
-			assertTrue("Le fichier est vide.", Files.size(fichierAnonymise1)>0);
-			assertTrue("Le fichier est vide.", Files.size(fichierAnonymise2)>0);
-			assertFalse("Le fichier créé est identique au fichier source.", IOUtils.contentEqualsIgnoreEOL(expectedFileReader1, outputFileReader1));
-			assertFalse("Le fichier créé est identique au fichier source.", IOUtils.contentEqualsIgnoreEOL(expectedFileReader1, outputFileReader2));
-			Diff diff = DiffBuilder.compare(new String(Files.readAllBytes(fichierAnonymise1)))
-					.withTest(new String(Files.readAllBytes(fichierAnonymise2)))
-					.ignoreWhitespace()
-					.checkForSimilar()
-					.build();
-			assertFalse("Les fichiers XML sont différents : " + diff.toString(), diff.hasDifferences());
-			assertEquals(1, futures.size());
-			assertTrue(futures.get(0).isDone());
-			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
-
-		} catch (Exception e) {
-			e.printStackTrace();
-			Assert.fail();
-		}
-	}
-
-	/* test use case :
-	 * - Recette : quiche-aux-legumes-anonymisee.xml
-	 * - Job : BuildAnonymizationRecipe
-	 * - Anonymiser deux recettes xml, avec des ingrédients différents (un même contexte et deux clés distinctes)
-	 **/
-	@Test
-	public void test3() {
-		try {
-			Jobs jobs = new Jobs(".", "jobs/quiche-aux-legumes-anonymisee.xml", variables, new Properties());
-			List<Future<ActivityMBean>> futures = jobs.executeJobList(Collections.singletonList("BuildAnonymizationRecipeWithIdenticalContextsAndDistinctKeys"), RUN_ID);
-
-			Path fileAnonymized1 = Paths.get("output/quicheAuxLegumesAnonymisee3.xml");
-			Path fileAnonymized2 = Paths.get("output/quicheAuxLegumesAnonymisee4.xml");
-			final File source = new File("src/test/resources/quiche-aux-legumes-anonymisee/quicheAuxLegumesAAnonymiser2.xml");
-			Reader sourceFileReader = new BufferedReader(new FileReader(source));
-			Reader anonymizedFileReader1 = new BufferedReader(new FileReader(fileAnonymized1.toString()));
-			Reader anonymizedFileReader2 = new BufferedReader(new FileReader(fileAnonymized2.toString()));
-
-			// Assertions
-			assertTrue("Le fichier n'existe pas.", Files.exists(fileAnonymized1));
-			assertTrue("Le fichier n'existe pas.", Files.exists(fileAnonymized2));
-			assertTrue("Le fichier est vide.", Files.size(fileAnonymized1)>0);
-			assertTrue("Le fichier est vide.", Files.size(fileAnonymized2)>0);
-			assertNotSame("Le fichier quicheAuxLegumesAnonymisee3 créé est identique au fichier source.", sourceFileReader, anonymizedFileReader1);
-			assertNotSame("Le fichier quicheAuxLegumesAnonymisee4 créé est identique au fichier source.", sourceFileReader, anonymizedFileReader2);
-			assertNotSame("Les fichiers créés sont identiques.", anonymizedFileReader1, anonymizedFileReader2);
-			Diff diff = DiffBuilder.compare(new String(Files.readAllBytes(fileAnonymized1)))
-					.withTest(new String(Files.readAllBytes(fileAnonymized2)))
-					.ignoreWhitespace()
-					.checkForSimilar()
-					.build();
-			assertTrue("Les fichiers XML sont identiques : " + diff.toString(), diff.hasDifferences());
-			assertEquals(1, futures.size());
-			assertTrue(futures.get(0).isDone());
-			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
-
-		} catch (Exception e) {
-			e.printStackTrace();
-			Assert.fail();
-		}
-	}
-
+	
 	private class InnerFileSystemManager extends StandardFileSystemManager {
 
 		@Override
