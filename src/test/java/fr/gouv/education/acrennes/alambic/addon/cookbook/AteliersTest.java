@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -62,7 +61,7 @@ import fr.gouv.education.acrennes.alambic.utils.Variables;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({JobHelper.class, VFS.class})
 @PowerMockIgnore({ "javax.management.*", "javax.net.ssl.*" })
-public class Atelier1Test {
+public class AteliersTest {
 	private static final String RUN_ID = "1";
 	private static final String UNIT_TEST_PERSISTENCE_UNIT = "TEST_PERSISTENCE_UNIT";
 	private static final String TEST_USERS_DICTIONARY_ARCHIVE = "src/test/resources/user-dictionaries-testu.tar.gz";
@@ -89,21 +88,21 @@ public class Atelier1Test {
 	        return invocation.callRealMethod();
 	    });		
 		variables = new Variables();
-		try (final InputStream is = Atelier1Test.class.getClassLoader().getResourceAsStream("variables.xml")) {
+		try (final InputStream is = AteliersTest.class.getClassLoader().getResourceAsStream("variables.xml")) {
 			Element variablesElt = (new SAXBuilder()).build(is).getRootElement();
 			variables.loadFromXmlNode(variablesElt.getChild("variables").getChildren("variable"));
 		}
 
 		// Clean the output directory content (in order to not disturb the next unit test)
-		Files.list(Paths.get("output/")).forEach(i -> {
-			try {
-				if (!i.endsWith(".donotremove")) {
-					Files.delete(i);
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
+//		Files.list(Paths.get("output/")).forEach(i -> {
+//			try {
+//				if (!i.endsWith(".donotremove")) {
+//					Files.delete(i);
+//				}
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		});
 
 		/**
 		 * Mock so that the dictionary is used for unit testing purpose
@@ -167,32 +166,70 @@ public class Atelier1Test {
 
 	/* test use case :
 	 * - Recette : atelier1
-	 * - Job : anonymization-job
-	 * - Description : ...
+	 * - Job : anonymization-job-atelier1
 	 **/
 	@Test
 	public void test1() {
 		try {
 			Jobs jobs = new Jobs(".", "jobs/atelier1.xml", variables, new Properties());
 			List<Future<ActivityMBean>> futures;
-            futures = jobs.executeJobList(Arrays.asList("anonymization-job"), RUN_ID);
+            futures = jobs.executeJobList(Arrays.asList("anonymization-job-atelier1"), RUN_ID);
 
 			final File sourceFile = new File("src/test/resources/atelier1/atelier1-file-to-anonymize.xml");
 			final File anonymizedFile = new File(Paths.get("output/atelier1-anonymized-file.xml").toString());
-			Reader sourceFileReader = new BufferedReader(new FileReader(sourceFile));
-			Reader anonymizedFileReader = new BufferedReader(new FileReader(anonymizedFile));
 
 			// Assertions
-            assertFalse("Le fichier créé est identique au fichier attendu.", IOUtils.contentEqualsIgnoreEOL(sourceFileReader, anonymizedFileReader));
 			assertEquals(1, futures.size());
-            assertTrue(futures.get(0).isDone());
+			assertTrue(futures.get(0).isDone());
 			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
+
+			assertFalse("Le fichier créé est identique au fichier attendu.", 
+					IOUtils.contentEqualsIgnoreEOL(
+							new BufferedReader(new FileReader(sourceFile)), 
+							new BufferedReader(new FileReader(anonymizedFile))));
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail();
 		}
 	}
-	
+
+	/* test use case :
+	 * - Recette : atelier2
+	 * - Job : anonymization-job-atelier2
+	 **/
+	@Test
+	public void test2() {
+		try {
+			Jobs jobs = new Jobs(".", "jobs/atelier2.xml", variables, new Properties());
+			List<Future<ActivityMBean>> futures;
+            futures = jobs.executeJobList(Arrays.asList("anonymization-job-atelier2"), RUN_ID);
+
+			final File sourceFile1 = new File("src/test/resources/atelier2/atelier2-customers-to-anonymize.xml");
+			final File anonymizedFile1 = new File(Paths.get("output/atelier2-anonymized-customers.xml").toString());
+
+			final File sourceFile2 = new File("src/test/resources/atelier2/atelier2-orders-to-anonymize.xml");
+			final File anonymizedFile2 = new File(Paths.get("output/atelier2-anonymized-orders.xml").toString());
+			
+			// Assertions
+			assertEquals(1, futures.size());
+			assertTrue(futures.get(0).isDone());
+			assertEquals(ActivityTrafficLight.GREEN, futures.get(0).get().getTrafficLight());
+			
+            assertFalse("Le fichier 'customers' créé est identique au fichier attendu.", 
+            		IOUtils.contentEqualsIgnoreEOL(
+            				new BufferedReader(new FileReader(sourceFile1)), 
+            				new BufferedReader(new FileReader(anonymizedFile1))));
+
+            assertFalse("Le fichier 'orders' créé est identique au fichier attendu.", 
+            		IOUtils.contentEqualsIgnoreEOL(
+            				new BufferedReader(new FileReader(sourceFile2)), 
+            				new BufferedReader(new FileReader(anonymizedFile2))));
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail();
+		}
+	}
+
 	private class InnerFileSystemManager extends StandardFileSystemManager {
 
 		@Override

@@ -36,24 +36,6 @@
             <value>guy.tarist@youhou.fr</value>
          </attr>
       </attributes>
-      <orders>
-         <order>
-         	<!-- 0-<customer identifier>-<order number> -->
-            <attr name="order-code">
-               <value>O-1234-0001</value>
-            </attr>
-            <!-- P-<product reference> -->
-            <attr name="product-code">
-               <value>P-0897</value>
-            </attr>
-            <attr name="count">
-               <value>5</value>
-            </attr>
-            <attr name="date">
-               <value>01/02/2026</value>
-            </attr>
-         </order>
-      </orders>
    </customer>
    <customer>
       <attributes>
@@ -91,35 +73,5 @@
             <value>laure.dinateur@stackoverflow.fr</value>
          </attr>
       </attributes>
-      <orders>
-         <order>
-            <attr name="order-code">
-               <value>O-2345-0001</value>
-            </attr>
-            <attr name="product-code">
-               <value>P-1234</value>
-            </attr>
-            <attr name="count">
-               <value>2</value>
-            </attr>
-            <attr name="date">
-               <value>08/04/2025</value>
-            </attr>
-         </order>
-         <order>
-            <attr name="order-code">
-               <value>O-2345-0002</value>
-            </attr>
-            <attr name="product-code">
-               <value>P-1047</value>
-            </attr>
-            <attr name="count">
-               <value>1</value>
-            </attr>
-            <attr name="date">
-               <value>18/03/2026</value>
-            </attr>
-         </order>
-      </orders>
    </customer>
 </customers>

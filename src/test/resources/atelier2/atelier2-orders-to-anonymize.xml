@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+	<order>
+		<!-- 0-<customer identifier>-<order number> -->
+		<attr name="order-code">
+			<value>O-1234-0001</value>
+		</attr>
+		<!-- P-<product reference> -->
+		<attr name="product-code">
+			<value>P-0897</value>
+		</attr>
+		<attr name="count">
+			<value>5</value>
+		</attr>
+		<attr name="date">
+			<value>01/02/2026</value>
+		</attr>
+		<customer>
+			<attr name="firstname">
+				<value>Guy</value>
+			</attr>
+			<attr name="lastname">
+				<value>Tarist</value>
+			</attr>
+			<attr name="civility">
+				<value>M.</value>
+			</attr>
+			<attr name="contactphone">
+				<value>0601121304</value>
+			</attr>
+		</customer>
+	</order>
+	<order>
+		<attr name="order-code">
+			<value>O-2345-0001</value>
+		</attr>
+		<attr name="product-code">
+			<value>P-1234</value>
+		</attr>
+		<attr name="count">
+			<value>2</value>
+		</attr>
+		<attr name="date">
+			<value>08/04/2025</value>
+		</attr>
+		<customer>
+			<attr name="firstname">
+				<value>Laure</value>
+			</attr>
+			<attr name="lastname">
+				<value>Dinateur</value>
+			</attr>
+			<attr name="civility">
+				<value>Mme</value>
+			</attr>		
+			<attr name="contactphone">
+				<value>0609080706</value>
+			</attr>
+		</customer>
+	</order>
+	<order>
+		<attr name="order-code">
+			<value>O-2345-0002</value>
+		</attr>
+		<attr name="product-code">
+			<value>P-1047</value>
+		</attr>
+		<attr name="count">
+			<value>1</value>
+		</attr>
+		<attr name="date">
+			<value>18/03/2026</value>
+		</attr>
+		<customer>
+			<attr name="firstname">
+				<value>Laure</value>
+			</attr>
+			<attr name="lastname">
+				<value>Dinateur</value>
+			</attr>
+			<attr name="civility">
+				<value>Mme</value>
+			</attr>		
+			<attr name="contactphone">
+				<value>0609080706</value>
+			</attr>
+		</customer>
+	</order>
+</orders>
