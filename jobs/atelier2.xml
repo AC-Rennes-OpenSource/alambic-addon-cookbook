@@ -26,10 +26,6 @@
                 <resource type="randomUserGenerator" name="randomUserGenerator" dynamic="true"/>
                 <resource type="randomDateGenerator" name="randomDateGenerator" dynamic="true"/>
                 <resource type="randomMailGenerator" name="randomMailGenerator" dynamic="true"/>
-                <resource type="randomUAIGenerator" name="randomUAIGenerator" dynamic="true"/>
-                <resource type="randomUidGenerator" name="randomUidGenerator" dynamic="true"/>
-                <resource type="randomUUidGenerator" name="randomUUidGenerator" dynamic="true"/>
-                <resource type="randomPasswordGenerator" name="randomPasswordGenerator" dynamic="true"/>
 				<resource type="blurIdGenerator" name="blurIdGenerator" dynamic="true">
 					<salt>%DEFAULT_SALT%</salt>
 				</resource>
@@ -46,12 +42,6 @@
             <resources>
                 <resource type="randomIntegerGenerator" name="randomIntegerGenerator" dynamic="true"/>
                 <resource type="randomUserGenerator" name="randomUserGenerator" dynamic="true"/>
-                <resource type="randomDateGenerator" name="randomDateGenerator" dynamic="true"/>
-                <resource type="randomMailGenerator" name="randomMailGenerator" dynamic="true"/>
-                <resource type="randomUAIGenerator" name="randomUAIGenerator" dynamic="true"/>
-                <resource type="randomUidGenerator" name="randomUidGenerator" dynamic="true"/>
-                <resource type="randomUUidGenerator" name="randomUUidGenerator" dynamic="true"/>
-                <resource type="randomPasswordGenerator" name="randomPasswordGenerator" dynamic="true"/>
 				<resource type="blurIdGenerator" name="blurIdGenerator" dynamic="true">
 					<salt>%DEFAULT_SALT%</salt>
 				</resource>
