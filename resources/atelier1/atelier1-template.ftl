@@ -81,6 +81,24 @@ ${""?left_pad(level * 3)}</${element?node_name}>
 		<#case "postcode">
 			<#assign anonymized_value=randomCustomer.location_postcode[0]/>
 			<#break>	
+		<#case "dob">
+			<#local date=Fn.query(resources, 'randomDateGenerator', '{"count":1,"processId":"${PROCESS_ID}","reuse":"true", "blurid":"${customer_blurId}","lowerYear":"1950","upperYear":"2000"}', 'PROCESS')[0].timestamp[0]?number?number_to_date/>
+			<#assign anonymized_value=date?string["dd/MM/yyyy"]/>
+			<#break>	
+		<#case "phone">
+			<#assign anonymized_value='0' + Fn.query(resources, 'randomIntegerGenerator', '{"count":1,"processId":"${PROCESS_ID}","reuse":"true", "blurid":"${customer_blurId}","minValue":600000000,"maxValue":799999999}', 'PROCESS')[0].value[0]/>
+			<#break>	
+		<#case "mail">
+			<#assign anonymized_value=Fn.query(resources, 'randomMailGenerator', '{"count":1,"processId":"PROCESS_ID","reuse":"true","blurid":"${customer_blurId}","firstName":"${randomCustomer.name_first[0]}","lastName":"${randomCustomer.name_last[0]}","domain":"noreply.phm.education.gouv.fr"}', 'PROCESS')[0].mail[0]/>
+			<#break>	
+		<#case "order-code">
+			<#assign anonymized_value=""/>
+			<#local m = child?string?matches(r"O-[0-9]+-([0-9]+)")/>
+			<#if m>
+				<#local anonymizedCustomerId=Fn.query(resources, 'randomIntegerGenerator', '{"count":1,"processId":"${PROCESS_ID}","reuse":"true", "blurid":"${customer_blurId}","minValue":1,"maxValue":1000}', 'PROCESS')[0].value[0]/>               
+				<#assign anonymized_value="O-${anonymizedCustomerId}-${m?groups[1]}"/>
+            </#if>
+			<#break>	
 		<#default>
 			<#assign anonymized_value=child/>
 	</#switch>
