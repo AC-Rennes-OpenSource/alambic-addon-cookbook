@@ -174,7 +174,7 @@ public class AteliersTest {
 			List<Future<ActivityMBean>> futures;
             futures = jobs.executeJobList(Arrays.asList("anonymization-job-atelier1"), RUN_ID);
 
-			final File sourceFile = new File("src/test/resources/atelier1/atelier1-file-to-anonymize.xml");
+			final File sourceFile = new File("input/atelier1/atelier1-file-to-anonymize.xml");
 			final File anonymizedFile = new File(Paths.get("output/atelier1-anonymized-file.xml").toString());
 
 			// Assertions
@@ -203,10 +203,10 @@ public class AteliersTest {
 			List<Future<ActivityMBean>> futures;
             futures = jobs.executeJobList(Arrays.asList("anonymization-job-atelier2"), RUN_ID);
 
-			final File sourceFile1 = new File("src/test/resources/atelier2/atelier2-customers-to-anonymize.xml");
+			final File sourceFile1 = new File("input/atelier2/atelier2-customers-to-anonymize.xml");
 			final File anonymizedFile1 = new File(Paths.get("output/atelier2-anonymized-customers.xml").toString());
 
-			final File sourceFile2 = new File("src/test/resources/atelier2/atelier2-orders-to-anonymize.xml");
+			final File sourceFile2 = new File("input/atelier2/atelier2-orders-to-anonymize.xml");
 			final File anonymizedFile2 = new File(Paths.get("output/atelier2-anonymized-orders.xml").toString());
 			
 			// Assertions

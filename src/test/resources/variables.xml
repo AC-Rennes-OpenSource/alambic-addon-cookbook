@@ -2,6 +2,7 @@
 <alambic>
 	<variables>
 		<variable name="ALAMBIC_TARGET_ENVIRONMENT">DEVELOPMENT</variable>
+		<variable name="INPUT_PATH">./input</variable>
  		<variable name="OUTPUT_PATH">./output</variable>
  		<variable name="RESOURCES_PATH">./resources</variable>
  		<variable name="DATA_GOUV_API_URL_DEVELOPMENT">https://data.education.gouv.fr/api/v2/catalog/datasets/fr-en-annuaire-education/records</variable>

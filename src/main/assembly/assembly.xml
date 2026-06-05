@@ -12,6 +12,9 @@
 			<directory>jobs</directory>
 		</fileSet>
 		<fileSet>
+			<directory>input</directory>
+		</fileSet>
+		<fileSet>
 			<directory>output</directory>
 		</fileSet>
 		<fileSet>

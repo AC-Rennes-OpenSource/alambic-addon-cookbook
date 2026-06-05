@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alambic version="2.0">
 	<variables>
- 		<variable name="RESOURCES_PATH">../resources</variable>
+		<variable name="INPUT_PATH">../input</variable>
+  		<variable name="RESOURCES_PATH">../resources</variable>
  		<variable name="OUTPUT_PATH">../output</variable>
 		<variable name="DEFAULT_SALT">SALT_123456</variable>
 	</variables>
@@ -25,7 +26,7 @@
                 <resource type="randomIntegerGenerator" name="randomIntegerGenerator" dynamic="true"/>
             </resources>
             <destination type="file" name="atelier1-anonymized-file.xml">
-            	<xmlfile name="atelier1FileToAnonymize">src/test/resources/atelier1/atelier1-file-to-anonymize.xml</xmlfile>
+            	<xmlfile name="atelier1FileToAnonymize">%INPUT_PATH%/atelier1/atelier1-file-to-anonymize.xml</xmlfile>
                 <template>%RESOURCES_PATH%/atelier1/atelier1-template.ftl</template>
                 <output>%OUTPUT_PATH%/atelier1-anonymized-file.xml</output>
             </destination>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alambic version="2.0">
 	<variables>
+		<variable name="INPUT_PATH">../input</variable>
  		<variable name="RESOURCES_PATH">../resources</variable>
  		<variable name="OUTPUT_PATH">../output</variable>
 		<variable name="DEFAULT_SALT">SALT_123456</variable>
@@ -31,7 +32,7 @@
 				</resource>
             </resources>
             <destination type="file" name="atelier2-anonymized-customers.xml">
-            	<xmlfile name="atelier2FileToAnonymize">src/test/resources/atelier2/atelier2-customers-to-anonymize.xml</xmlfile>
+            	<xmlfile name="atelier2FileToAnonymize">%INPUT_PATH%/atelier2/atelier2-customers-to-anonymize.xml</xmlfile>
                 <template>%RESOURCES_PATH%/atelier2/atelier2-template-customers.ftl</template>
                 <output>%OUTPUT_PATH%/atelier2-anonymized-customers.xml</output>
             </destination>
@@ -47,7 +48,7 @@
 				</resource>
             </resources>
             <destination type="file" name="atelier2-anonymized-orders.xml">
-            	<xmlfile name="atelier2FileToAnonymize">src/test/resources/atelier2/atelier2-orders-to-anonymize.xml</xmlfile>
+            	<xmlfile name="atelier2FileToAnonymize">%INPUT_PATH%/atelier2/atelier2-orders-to-anonymize.xml</xmlfile>
                 <template>%RESOURCES_PATH%/atelier2/atelier2-template-orders.ftl</template>
                 <output>%OUTPUT_PATH%/atelier2-anonymized-orders.xml</output>
             </destination>
